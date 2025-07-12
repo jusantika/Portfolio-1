@@ -2,13 +2,14 @@
 import LetterGlitch from "../React/LetterGlitch.tsx";
 import LogoWall from "../components/logoWall.astro";
 import SkillsList from "../React/SkillsList.tsx";
+import Orb from "../React/Orb.tsx";
 ---
 
 <section class="text-[var(--white)] mt-12 md:mt-0" id="home">
   <div class="max-w-5xl mx-auto space-y-8 md:py-36 pb-14">
     <div class="text-left space-y-4">
       <p class="text-md md:text-lg text-[var(--white-icon)] shiny-white">
-        Hi, I'm Oscar Hernandez
+        Welcome to
       </p>
       <div
         class="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8 md:gap-4"
@@ -16,13 +17,12 @@ import SkillsList from "../React/SkillsList.tsx";
         <h1
           class="text-[var(--white)] text-5xl md:text-6xl font-medium text-pretty leading-none"
         >
-          Software <br /> Developer
+          Galleria <br /> Gallerio
         </h1>
         <p class="text-md md:text-2xl text-[var(--white-icon)]">
-          Transforming ideas into interactive and seamless digital experiences
-          with cutting-edge <span class="text-[var(--sec)] shiny-sec"
-            >frontend</span
-          > development.
+          A place to discover various activities through media 
+          and engaging projects. <span class="text-[var(--sec)] shiny-sec"
+            >See It, Feel It, Create It.</span
         </p>
       </div>
       <div class="flex justify-start gap-2 pt-3 md:pt-6">
@@ -86,16 +86,16 @@ import SkillsList from "../React/SkillsList.tsx";
     <div class="flex flex-col lg:flex-row items-center gap-8">
       <SkillsList client:load />
       <div
-        class="flex justify-center md:w-full md:h-[292px] size-[290px] pt-3 md:pt-9 md:ml-16"
+        class="flex justify-center md:w-full md:h-[350px] size-[350px] pt-3 md:pt-9 md:ml-16"
       >
-        <LetterGlitch
-          client:load
-          glitchColors={["#5e4491", "#A476FF", "#241a38"]}
-          glitchSpeed={33}
-          centerVignette={false}
-          outerVignette={true}
-          smooth={true}
+      <Orb
+        client:load
+        hoverIntensity={2}
+        rotateOnHover={true}
+        hue={0}
+        forceHoverState={false}
         />
+</div>
       </div>
     </div>
   </div>
@@ -103,7 +103,7 @@ import SkillsList from "../React/SkillsList.tsx";
 
 <style is:global>
   .shiny-sec {
-    background: linear-gradient(135deg, #a476ff 25%, #eee5ff 50%, #a476ff 75%);
+    background: linear-gradient(135deg, #a476ff 25%, #eee5ff 50%, #1d2951 75%);
     background-size: 400% 100%;
     -webkit-background-clip: text;
     background-clip: text;
