@@ -5,7 +5,7 @@ import "./Orb.css";
 
 export default function Orb({
   hue = 0,
-  hoverIntensity = 2,
+  hoverIntensity = 1.5,
   rotateOnHover = true,
   forceHoverState = false,
 }) {
